@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Manoj G. Massand, MD, MBA</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Manoj G. Massand, MD, MBA. Neuroradiologist and partner at Barrow Neurological Institute and Southwest Neuro-Imaging, Wharton MBA, working on AI integration, operations, and finance in healthcare.">
+<meta property="og:title" content="Manoj G. Massand, MD, MBA">
+<meta property="og:description" content="Neuroradiologist, physician executive, and builder of clinical AI.">
+<meta property="og:image" content="https://manojmassand.com/assets/portrait.jpg">
+<meta property="og:url" content="https://manojmassand.com/">
+<link rel="canonical" href="https://manojmassand.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+/* Layout: one long scroll. A studio-grey hero band matched to the portrait's backdrop so the
+   figure stands in the page; below it, label-left / content-right sections of dated lists. */
+:root {
+  --band: #554f53;            /* sampled from the portrait backdrop */
+  --band-deep: #4c474b;
+  --band-ink: #f4f1f2;
+  --band-muted: #c9c2c6;
+  --band-accent: #a9bcf0;     /* the shirt blue, lifted for the dark band */
+  --band-rule: rgba(244, 241, 242, .22);
+
+  --bg: #f6f5f6;
+  --ink: #1b191c;
+  --muted: #68636a;
+  --rule: #dbd7dc;
+  --accent: #2c4ba3;
+  --wash: #eceaed;
+
+  --display: "Instrument Serif", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --text: "Geist", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "Geist Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  --measure: 66ch;
+  --page: 1120px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #151416; --ink: #ecebee; --muted: #a49fa6; --rule: #343036; --accent: #a9bcf0; --wash: #1e1c20;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #151416; --ink: #ecebee; --muted: #a49fa6; --rule: #343036; --accent: #a9bcf0; --wash: #1e1c20;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--text);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration-color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, p, ul, ol, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+
+.wrap {
+  max-width: var(--page);
+  margin-inline: auto;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+}
+
+/* ---------- Hero band ---------- */
+.band {
+  background: radial-gradient(120% 90% at 74% 45%, #5b5458 0%, var(--band) 45%, var(--band-deep) 100%);
+  color: var(--band-ink);
+  overflow: hidden;
+}
+.band a:hover { color: var(--band-accent); }
+.band a:focus-visible { outline-color: var(--band-accent); }
+.topnav {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 28px;
+  padding-block: 26px 0;
+  font-family: var(--mono); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase;
+}
+.topnav a { text-decoration: none; color: var(--band-muted); }
+.topnav .mark { color: var(--band-ink); }
+.topnav ul { display: flex; flex-wrap: wrap; gap: 6px 26px; }
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+  align-items: end;
+  gap: 24px;
+}
+.hero-text { padding-block: 72px 64px; min-width: 0; }
+.where {
+  font-family: var(--mono); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--band-accent);
+}
+.hero h1 {
+  font-family: var(--display); font-weight: 400;
+  font-size: clamp(4.25rem, 12vw, 9.25rem);
+  line-height: .86; letter-spacing: -.015em;
+  margin-top: 18px;
+}
+.hero h1 span { display: block; }
+.creds {
+  font-family: var(--display); font-style: italic;
+  font-size: clamp(1.6rem, 3vw, 2.25rem); line-height: 1;
+  color: var(--band-accent);
+  margin-top: 18px;
+}
+.tagline {
+  max-width: 30ch;
+  font-size: clamp(1.15rem, 1.9vw, 1.4rem); line-height: 1.4;
+  margin-top: 28px;
+  text-wrap: balance;
+}
+.stats {
+  display: flex; flex-wrap: wrap; gap: 20px 56px;
+  margin-top: 44px; padding-top: 24px;
+  border-top: 1px solid var(--band-rule);
+}
+.stats dt {
+  font-family: var(--display); font-size: clamp(3rem, 5.5vw, 4.25rem); line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.stats dt small { font-family: var(--text); font-size: 1.05rem; letter-spacing: 0; color: var(--band-muted); margin-left: .15em; }
+.stats dd.deg { max-width: none; }
+.stats dd b { font-weight: 500; color: var(--band-ink); }
+.stats dd { margin: 6px 0 0; font-size: .92rem; line-height: 1.4; color: var(--band-muted); max-width: 22ch; }
+.portrait { align-self: end; min-width: 0; }
+.portrait img {
+  width: 100%; aspect-ratio: 1000 / 1320; object-fit: cover; object-position: 50% 0;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 17%, #000 83%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 16%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent 0, #000 17%, #000 83%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 16%);
+  mask-composite: intersect;
+}
+
+/* ---------- Sections ---------- */
+main { padding-block: 24px 40px; }
+.sec {
+  display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 16px 56px;
+  padding-block: 64px;
+  border-bottom: 1px solid var(--rule);
+}
+.sec:last-of-type { border-bottom: 0; }
+.sec > h2 {
+  font-family: var(--display); font-weight: 400; font-size: 2.35rem; line-height: 1.05;
+  text-wrap: balance;
+}
+.sec > div { min-width: 0; }
+.lede {
+  font-family: var(--display); font-size: clamp(1.6rem, 2.6vw, 2.1rem); line-height: 1.22;
+  max-width: 28ch; text-wrap: balance;
+}
+.prose { display: grid; gap: 1em; max-width: var(--measure); }
+.lede + .prose { margin-top: 28px; }
+.sub {
+  font-family: var(--mono); font-size: .75rem; font-weight: 500; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--muted);
+  margin-block: 44px 4px;
+}
+.sub:first-child { margin-top: 0; }
+
+/* Dated rows: mono date, then what and where */
+.rows > li {
+  display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 4px 24px;
+  padding-block: 18px;
+  border-top: 1px solid var(--rule);
+}
+.rows > li:first-child { border-top: 0; padding-top: 6px; }
+.when {
+  font-family: var(--mono); font-size: .8rem; letter-spacing: .03em; color: var(--muted);
+  font-variant-numeric: tabular-nums; padding-top: .28em;
+}
+.what { min-width: 0; }
+.what h3 { font-size: 1.0625rem; font-weight: 600; line-height: 1.4; }
+.what h3 a { text-decoration-color: var(--rule); }
+.what h3 a:hover { text-decoration-color: var(--accent); }
+.what .role { color: var(--ink); }
+.what p { max-width: var(--measure); }
+.what .meta { color: var(--muted); font-size: .95rem; margin-top: 2px; }
+.what .notes { margin-top: 10px; display: grid; gap: 8px; max-width: var(--measure); font-size: .98rem; }
+.what .notes li { padding-left: 1.1em; position: relative; }
+.what .notes li::before { content: ""; position: absolute; left: 0; top: .72em; width: .5em; height: 1px; background: var(--accent); }
+.what em { font-style: normal; color: var(--accent); }
+
+.focus { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 48px; }
+.focus h3 { font-family: var(--display); font-weight: 400; font-size: 1.55rem; line-height: 1.15; }
+.focus p { margin-top: 8px; color: var(--muted); font-size: .98rem; max-width: 40ch; }
+
+
+.photo { margin-top: 44px; }
+.photo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: 78% 50%; }
+.photo figcaption { margin-top: 10px; font-family: var(--mono); font-size: .75rem; letter-spacing: .04em; color: var(--muted); }
+
+.note { margin-top: 28px; max-width: var(--measure); color: var(--muted); font-size: .98rem; }
+.what .desc { margin-top: 8px; }
+.lede + .focus { margin-top: 40px; }
+
+/* ---------- Footer ---------- */
+footer { border-top: 1px solid var(--rule); }
+.foot {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 14px 32px;
+  padding-block: 36px 48px;
+  font-size: .92rem; color: var(--muted);
+}
+.foot .name { font-family: var(--display); font-size: 1.6rem; color: var(--ink); text-decoration: none; }
+.foot ul { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.foot .fine { flex-basis: 100%; font-family: var(--mono); font-size: .72rem; letter-spacing: .04em; }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .hero-text { padding-block: 48px 8px; }
+  .portrait { max-width: 400px; margin-inline: auto; width: 100%; }
+  .sec { grid-template-columns: minmax(0, 1fr); padding-block: 48px; }
+  .sec > h2 { font-size: 2.1rem; }
+  .focus { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+}
+@media (max-width: 560px) {
+  .wrap { padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
+  .rows > li { grid-template-columns: minmax(0, 1fr); }
+  .when { padding-top: 0; }
+  .topnav .mark { flex-basis: 100%; }
+  .stats { gap: 20px 36px; }
+}
+</style>
+</head>
+<body>
+
+<header class="band" id="top">
+  <div class="wrap">
+    <nav class="topnav" aria-label="Sections">
+      <a class="mark" href="#top">M. G. Massand</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#focus">Focus</a></li>
+        <li><a href="#institutions">Institutions</a></li>
+        <li><a href="#research">Work</a></li>
+        <li><a href="#education">Education</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-text">
+        <p class="where">Barrow Neurological Institute · Phoenix, Arizona</p>
+        <h1><span>Manoj</span><span>Massand</span></h1>
+        <p class="creds">MD, MBA</p>
+        <p class="tagline">Neuroradiologist, physician executive, and builder of clinical AI.</p>
+        <dl class="stats">
+          <div><dt>20+</dt><dd>years in neuroradiology at Barrow, Cleveland Clinic, and Baylor</dd></div>
+          <div><dt>3 <small>disciplines</small></dt><dd class="deg"><b>Princeton</b> B.S.E. Chemical Engineering<br><b>University of Chicago – Pritzker</b> M.D.<br><b>Wharton</b> M.B.A.</dd></div>
+        </dl>
+      </div>
+      <div class="portrait">
+        <img src="assets/portrait.jpg" width="1000" height="1500" alt="Manoj Massand, MD, MBA, in a blue shirt and striped tie">
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="sec" id="about">
+    <h2>About</h2>
+    <div>
+      <p class="lede">Working where medicine, technology, and business strategy meet.</p>
+      <div class="prose">
+        <p>Manoj Massand is a board-certified neuroradiologist and a partner at Southwest Neuro-Imaging at Barrow Neurological Institute in Phoenix. His career has run through three of the strongest imaging environments in American medicine: Barrow, Cleveland Clinic, and Baylor University Medical Center.</p>
+        <p>In 2026 he completed an MBA with honors at The Wharton School (University of Pennsylvania), with majors in Finance, Business Analytics, and Artificial Intelligence for Business. He puts the clinical and business training to work on the same problems: bringing AI into practice, running imaging operations well, and making the financial case for both.</p>
+        <p>He studied chemical engineering at Princeton before medicine. A competitive tennis player, he captained the varsity team at Deerfield Academy and played junior varsity tennis at Princeton, and he still plays racket sports and golf. He is also a distance runner with 30 marathons behind him, including 11 Boston Marathon finishes, and a personal record of 2:59:55.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="focus">
+    <h2>Focus</h2>
+    <div>
+      <p class="lede">Four areas where clinical judgment and business training apply together.</p>
+      <div class="focus">
+        <div>
+          <h3>AI strategy and clinical integration</h3>
+          <p>Deciding which AI tools earn a place in the reading room, validating them against real cases, and fitting them into the workflow so they change turnaround and triage rather than sit unused.</p>
+        </div>
+        <div>
+          <h3>Imaging operations and enterprise value</h3>
+          <p>Scheduling, technologist workflow, pricing, and professional productivity across multi-site imaging enterprises, seen from both an academic health system and a physician-owned practice.</p>
+        </div>
+        <div>
+          <h3>Healthcare finance and analytics</h3>
+          <p>Forecasting, valuation, and business analytics applied to practice management, growth, and investment decisions in imaging and the wider health system.</p>
+        </div>
+        <div>
+          <h3>Physician leadership and education</h3>
+          <p>Building teams and leading change among physicians, grounded in nine years directing fellowship training and two decades teaching residents and fellows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="institutions">
+    <h2>Institutions</h2>
+    <div>
+      <ul class="rows">
+        <li>
+          <span class="when">2003 – 2005<br>Since 2024</span>
+          <div class="what">
+            <h3>Barrow Neurological Institute</h3>
+            <p class="role">Staff Neuroradiologist &amp; Partner, Southwest Neuro-Imaging · Phoenix, AZ</p>
+            <p class="desc">A top-ranked neuroscience center where imaging volume and case complexity are both high. He trained here as a neuroradiology fellow and returned two decades later as a partner. He mentors 10 neuroradiology fellows a year and works on practice operations, strategy, and research in AI-assisted interpretation.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2012 – 2024</span>
+          <div class="what">
+            <h3>Cleveland Clinic, Imaging Institute</h3>
+            <p class="role">Staff Neuroradiologist · Cleveland, OH</p>
+            <p class="desc">A high-volume imaging enterprise spanning Ohio, Florida, and Nevada. In twelve years here he was associate director of the neuroradiology fellowship, served on the Imaging Value Maximization Program that reworked scheduling, workflow, pricing, and productivity across the enterprise, and led an AI collaboration with Siemens as principal investigator.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2026</span>
+          <div class="what">
+            <h3>The Wharton School, University of Pennsylvania</h3>
+            <p class="role">MBA with Honors</p>
+            <p class="desc">Majors in Finance, Business Analytics, and Artificial Intelligence for Business. He also served as teaching assistant for Wharton’s global modular course on Saudi Arabia’s economic transformation, taught in Al Khobar and Riyadh, and took additional global modular courses in China (Technology and Artificial Intelligence) and India (Innovation and Ecosystems).</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2005 – 2010</span>
+          <div class="what">
+            <h3>Baylor University Medical Center</h3>
+            <p class="role">Staff Neuroradiologist &amp; Partner, American Radiology Associates · Dallas, TX</p>
+            <p class="desc">A 50+ physician private practice with an academic affiliation. As a full equity partner he saw the business of radiology from the owner’s seat while teaching residents and fellows.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2010 – 2012</span>
+          <div class="what">
+            <h3>Colorado Neurological Institute</h3>
+            <p class="role">Staff Neuroradiologist, Radiology Imaging Associates · Englewood, CO</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="research">
+    <h2>Selected work</h2>
+    <div>
+      <ul class="rows">
+        <li>
+          <span class="when">AI</span>
+          <div class="what">
+            <h3>AI methods to triage brain MRI examinations</h3>
+            <p class="meta">Principal Investigator, Siemens / Cleveland Clinic AI Collaboration · $70K in grant funding</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2026</span>
+          <div class="what">
+            <h3>A head CT marker of probable normal pressure hydrocephalus that predicts falls in older adults</h3>
+            <p class="meta">Barrow Neurological Institute and Arizona State University · presented at the Western Neuroradiological Society, 2025; manuscript in submission</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2018</span>
+          <div class="what">
+            <h3><a href="https://pubmed.ncbi.nlm.nih.gov/27915116/">7T MR of intracranial pathology: preliminary observations and comparisons to 3T and 1.5T</a></h3>
+            <p class="meta">Neuroimage · co-investigator on early ultra-high-field clinical imaging at Cleveland Clinic</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2017</span>
+          <div class="what">
+            <h3><a href="https://pubmed.ncbi.nlm.nih.gov/28473342/">Prevalence of traumatic findings on routine MRI in a large cohort of professional fighters</a></h3>
+            <p class="meta">American Journal of Neuroradiology</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2005</span>
+          <div class="what">
+            <h3><a href="https://pubmed.ncbi.nlm.nih.gov/16219857/">Subarachnoid hemorrhage due to isolated spinal artery aneurysm in four patients</a></h3>
+            <p class="meta">American Journal of Neuroradiology · first author, with the Barrow neurosurgery group</p>
+          </div>
+        </li>
+      </ul>
+      <p class="note">More than 20 peer-reviewed articles and abstracts in journals including the American Journal of Neuroradiology, Neurosurgery, and Neuroimage.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="education">
+    <h2>Education</h2>
+    <div>
+      <ul class="rows">
+        <li>
+          <span class="when">2026</span>
+          <div class="what">
+            <h3>The Wharton School, University of Pennsylvania</h3>
+            <p class="role">Master of Business Administration, with Honors</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">1998</span>
+          <div class="what">
+            <h3>University of Chicago Pritzker School of Medicine</h3>
+            <p class="role">Doctor of Medicine</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">1994</span>
+          <div class="what">
+            <h3>Princeton University</h3>
+            <p class="role">Bachelor of Science in Engineering, Chemical Engineering</p>
+            <p class="meta">Magna Cum Laude · Phi Beta Kappa · Sigma Xi · Tau Beta Pi</p>
+          </div>
+        </li>
+      </ul>
+
+      <figure class="photo">
+        <img src="assets/wharton-graduation.jpg" width="1800" height="1200" loading="lazy" alt="Manoj Massand in cap and gown receiving his diploma on stage at the Wharton graduation ceremony">
+        <figcaption>Wharton MBA graduation, 2026</figcaption>
+      </figure>
+
+      <p class="note">Neuroradiology fellowship at Barrow Neurological Institute, after diagnostic radiology residency at the University of Miami / Jackson Memorial Hospital and the University of Texas Medical Branch. Board certified in diagnostic radiology and neuroradiology by the American Board of Radiology. Senior Member of the American Society of Neuroradiology.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="name" href="#top">Manoj G. Massand</a>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/manoj-massand-md-mba-028454a">LinkedIn</a></li>
+      <li><a href="https://www.barrowneuro.org/person/manoj-g-massand-md/">Barrow profile</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#focus">Focus</a></li>
+      <li><a href="#institutions">Institutions</a></li>
+      <li><a href="#research">Work</a></li>
+    </ul>
+    <p class="fine">© 2026 Manoj G. Massand, MD, MBA</p>
+  </div>
+</footer>
+
+</body>
+</html>
