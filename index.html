@@ -203,6 +203,10 @@ main { padding-block: 24px 40px; }
 .photo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: 78% 50%; }
 .photo figcaption { margin-top: 10px; font-family: var(--mono); font-size: .75rem; letter-spacing: .04em; color: var(--muted); }
 
+.plain { display: grid; gap: 8px; padding-top: 8px; }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; }
+.pair .sub { margin-top: 44px; }
+@media (max-width: 700px) { .pair { grid-template-columns: minmax(0, 1fr); } }
 .note { margin-top: 28px; max-width: var(--measure); color: var(--muted); font-size: .98rem; }
 .what .desc { margin-top: 8px; }
 .lede + .focus { margin-top: 40px; }
@@ -328,7 +332,7 @@ footer { border-top: 1px solid var(--rule); }
           </div>
         </li>
         <li>
-          <span class="when">2026</span>
+          <span class="when">2024 – 2026</span>
           <div class="what">
             <h3>The Wharton School, University of Pennsylvania</h3>
             <p class="role">MBA with Honors</p>
@@ -431,7 +435,49 @@ footer { border-top: 1px solid var(--rule); }
         <figcaption>Wharton MBA graduation, 2026</figcaption>
       </figure>
 
-      <p class="note">Neuroradiology fellowship at Barrow Neurological Institute, after diagnostic radiology residency at the University of Miami / Jackson Memorial Hospital and the University of Texas Medical Branch. Board certified in diagnostic radiology and neuroradiology by the American Board of Radiology. Senior Member of the American Society of Neuroradiology.</p>
+      <h3 class="sub">Post-graduate training</h3>
+      <ul class="rows">
+        <li>
+          <span class="when">2003 – 2005</span>
+          <div class="what">
+            <h3>Neuroradiology Fellowship</h3>
+            <p class="meta">Barrow Neurological Institute, Phoenix, AZ</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2001 – 2003</span>
+          <div class="what">
+            <h3>Diagnostic Radiology Residency</h3>
+            <p class="meta">University of Miami / Jackson Memorial Hospital</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">1999 – 2001</span>
+          <div class="what">
+            <h3>Diagnostic Radiology Residency</h3>
+            <p class="meta">University of Texas Medical Branch</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="pair">
+        <div>
+          <h3 class="sub">Board certification</h3>
+          <ul class="plain">
+            <li>American Board of Radiology, Diagnostic Radiology</li>
+            <li>American Board of Radiology, Neuroradiology</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="sub">Professional societies</h3>
+          <ul class="plain">
+            <li>Senior Member, American Society of Neuroradiology</li>
+            <li>Member, Radiological Society of North America</li>
+            <li>Member, Western Neuroradiological Society</li>
+            <li>Member, American College of Artificial Intelligence and Medicine</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
